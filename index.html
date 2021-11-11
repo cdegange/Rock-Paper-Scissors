@@ -10,39 +10,40 @@
     <link rel="stylesheet" href="./styles.css">
     <title>Rock, Paper, Scissors</title>
   </head>
-  <body class="game">
-    <section class = "center-game-board"
-      <header class = "main-title">Rock, Paper, Scissors<img src= ></header>
-        <p class = "choose-game-title"id = "chooseGameTitle">Choose your game!</p>
-        <p class = "choose-fighter hidden">Choose your fighter!</p>
-        <img class = "classic-game-chosen hidden"id="classGameImage"src=/Users/chaddegange/Downloads/happy-paper.png width="35" height="35">
-        <img class = "classic-game-chosen hidden"id="classGameImage"src=/Users/chaddegange/Downloads/happy-scissors.png width="35" height="35">
-        <img class = "classic-game-chosen hidden"id="classGameImage"src=/Users/chaddegange/Downloads/happy-rocks.png width="35" height="35">
-        <img class = "alt-game-chosen hidden"id="altGameImage"src=/Users/chaddegange/Downloads/plane-svgrepo-com.svg width="35" height="35">
-        <img class = "alt-game-chosen hidden"id="altGameImage"src=/Users/chaddegange/Downloads/car-svgrepo-com.svg width="35" height="35">
-        <img class = "alt-game-chosen hidden"id="altGameImage"src=/Users/chaddegange/Downloads/train-svgrepo-com.svg width="35" height="35">
+  <body>
+    <section class="human-wins">
+      <h2 class="human-wins-column">Human</h2>
+      <h3 class="human-wins-counter"> Wins: O</h3>
+    </section>
+  <main class = "center-game-board">
+        <h1 class = "main-title">Rock, Paper, Scissors</h1>
+        <h2 class = "choose-your-game"id = "chooseGameTitle">Choose your game!</h2>
+          <img class = "classic-game-chosen hidden"id="classGameImage"src=/Users/chaddegange/Downloads/happy-paper.png width="35" height="35">
+          <img class = "classic-game-chosen hidden"id="classGameImage"src=/Users/chaddegange/Downloads/happy-scissors.png width="35" height="35">
+          <img class = "classic-game-chosen hidden"id="classGameImage"src=/Users/chaddegange/Downloads/happy-rocks.png width="35" height="35">
+          <img class = "alt-game-chosen hidden"id="altGameImage"src=/Users/chaddegange/Downloads/plane-svgrepo-com.svg width="35" height="35">
+          <img class = "alt-game-chosen hidden"id="altGameImage"src=/Users/chaddegange/Downloads/car-svgrepo-com.svg width="35" height="35">
+          <img class = "alt-game-chosen hidden"id="altGameImage"src=/Users/chaddegange/Downloads/train-svgrepo-com.svg width="35" height="35">
+    <section class = "classic-or-spicy">
       <div class = "classic-game-rules"id = "classGameRules">
-        <h1 class = "classic"><img src=/Users/chaddegange/Downloads/happy-rocks.png width="35" height= "35">CLASSIC <img src=/Users/chaddegange/Downloads/happy-scissors.png width="35" height= "35"></h1>
+        <h2 class = "classic"><img src=/Users/chaddegange/Downloads/happy-rocks.png width="35" height= "35">CLASSIC <img src=/Users/chaddegange/Downloads/happy-scissors.png width="35" height= "35"></h2>
         <p class = "game-rules">rock > scissors</p>
         <p class = "game-rules">paper > rock</p>
         <p class = "game-rules">scissors > paper</p>
       </div>
-      <div class = "alt-game-title"id = "altGameRules">
-        <h1 class = "alternative"><img src=/Users/chaddegange/Downloads/plane-svgrepo-com.svg width="35" height= "35">SPICY<img src=/Users/chaddegange/Downloads/train-svgrepo-com.svg width="35" height= "35"></h1>
+      <div class = "alt-game-rules"id = "altGameRules">
+        <h2 class = "alternative"><img src=/Users/chaddegange/Downloads/plane-svgrepo-com.svg width="35" height= "35">SPICY<img src=/Users/chaddegange/Downloads/train-svgrepo-com.svg width="35" height= "35"></h2>
         <p class = "game-rules">plane > car</p>
         <p class = "game-rules">boat > plane</p>
         <p class = "game-rules">boat > car</p>
       </div>
     </section>
-    <section class="human-wins">
-      <h2 class="human-wins-column">Human</h2>
-      <p class="human-wins-counter"> Wins: O</p>
-    </section>
+  </main>
     <section class="computer-wins">
       <h2 class="computer-wins-column">Computer</h2>
-      <p class="computer-wins-counter"> Wins: O</p>
+      <h3 class="computer-wins-counter"> Wins: O</h3>
     </section>
   </body>
-  <script src="Activity.js"></script>
+  <script src="player.js"></script>
   <script src="main.js"></script>
 </html>
