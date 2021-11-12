@@ -12,19 +12,26 @@
   </head>
   <body>
     <section class="human-wins">
+      <h2 class="human-token"></h2>
       <h2 class="human-wins-column">Human</h2>
       <h3 class="human-wins-counter"> Wins: O</h3>
     </section>
-  <main class = "center-game-board">
+  <main>
         <h1 class = "main-title">Rock, Paper, Scissors</h1>
         <h2 class = "choose-your-game"id = "chooseGameTitle">Choose your game!</h2>
-          <img class = "classic-game-chosen hidden"id="classGameImage"src=/Users/chaddegange/Downloads/happy-paper.png width="35" height="35">
-          <img class = "classic-game-chosen hidden"id="classGameImage"src=/Users/chaddegange/Downloads/happy-scissors.png width="35" height="35">
-          <img class = "classic-game-chosen hidden"id="classGameImage"src=/Users/chaddegange/Downloads/happy-rocks.png width="35" height="35">
-          <img class = "alt-game-chosen hidden"id="altGameImage"src=/Users/chaddegange/Downloads/plane-svgrepo-com.svg width="35" height="35">
-          <img class = "alt-game-chosen hidden"id="altGameImage"src=/Users/chaddegange/Downloads/car-svgrepo-com.svg width="35" height="35">
-          <img class = "alt-game-chosen hidden"id="altGameImage"src=/Users/chaddegange/Downloads/train-svgrepo-com.svg width="35" height="35">
-    <section class = "classic-or-spicy">
+      <section class="gameplay-images hidden"id="classicGameBoard">
+          <img class = "classic-game-chosen"id="classicPaper"src=/Users/chaddegange/Downloads/happy-paper.png width="125" height="125">
+          <img class = "classic-game-chosen"id="classicScissors"src=/Users/chaddegange/Downloads/happy-scissors.png width="125" height="125">
+          <img class = "classic-game-chosen"id="classicRock"src=/Users/chaddegange/Downloads/happy-rocks.png width="125" height="125">
+      </section>
+      <section class="gameplay-images hidden"id="altGameBoard">
+          <img class="alt-game-chosen"src=/Users/chaddegange/Downloads/plane-svgrepo-com.svg width="100" height="100">
+          <img class="alt-game-chosen"src=/Users/chaddegange/Downloads/car-svgrepo-com.svg width="100" height="100">
+          <img class="alt-game-chosen"src=/Users/chaddegange/Downloads/train-svgrepo-com.svg width="100" height="100">
+          <img class="alt-game-chosen"src=/Users/chaddegange/Downloads/happy-scissors.png width="100" height="100">
+          <img class="alt-game-chosen"src=/Users/chaddegange/Downloads/happy-rocks.png width="100" height="100">
+      </section>
+    <section class = "classic-or-spicy"id="classicOrSpicy">
       <div class = "classic-game-rules"id = "classGameRules">
         <h2 class = "classic"><img src=/Users/chaddegange/Downloads/happy-rocks.png width="35" height= "35">CLASSIC <img src=/Users/chaddegange/Downloads/happy-scissors.png width="35" height= "35"></h2>
         <p class = "game-rules">rock > scissors</p>
@@ -40,10 +47,12 @@
     </section>
   </main>
     <section class="computer-wins">
+      <h2 class="computer-token"></h2>
       <h2 class="computer-wins-column">Computer</h2>
       <h3 class="computer-wins-counter"> Wins: O</h3>
     </section>
   </body>
+  <script src="game.js"></script>
   <script src="player.js"></script>
   <script src="main.js"></script>
 </html>
