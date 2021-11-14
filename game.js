@@ -12,9 +12,9 @@ class Game {
   computerSelectionClassic() {
     console.log(this.gameType)
     if(this.gameType === "Classic") {
-    this.choices = ["Rock", "Paper", "Scissors"];
+    this.choices = ["rock", "paper", "scissors"];
   } else if(this.gameType === "Spicy") {
-    this.choices = ["Rock", "Paper", "Scissors", "Plane", "Car"]
+    this.choices = ["rock", "paper", "scissors", "plane", "car"]
   }
   console.log(this.gameType);
   console.log(this.choices);
@@ -23,28 +23,24 @@ class Game {
     }
 
   determineOutcomeClassic() {
-      if(this.computerSelection === "Rock" && this.userSelection === "classicRock") {
+      if(this.computerSelection === this.userSelection) {
       this.result = "It's a draw!";
-    } else if(this.computerSelection === "Rock" && this.userSelection === "classicPaper") {
+    } else if(this.computerSelection === "rock" && this.userSelection === "paper") {
       this.result = "You win!";
       this.player1.wins += 1;
-    } else if(this.computerSelection === "Rock" && this.userSelection === "classicScissors") {
+    } else if(this.computerSelection === "rock" && this.userSelection === "scissors") {
       this.result = "You lost!";
       this.cpu.wins += 1;
-    } else if(this.computerSelection === "Paper" && this.userSelection === "classicPaper") {
-      this.result = "It's a draw!";
-    } else if(this.computerSelection === "Paper" && this.userSelection === "classicRock") {
+    } else if(this.computerSelection === "paper" && this.userSelection === "rock") {
       this.result = "You lost!";
       this.cpu.wins += 1;
-    } else if(this.computerSelection === "Paper" && this.userSelection === "classicScissors") {
+    } else if(this.computerSelection === "paper" && this.userSelection === "scissors") {
       this.result = "You won!";
       this.player1.wins += 1;
-    } else if(this.computerSelection === "Scissors" && this.userSelection === "classicScissors") {
-      this.result = "It's a draw!";
-    } else if(this.computerSelection === "Scissors" && this.userSelection === "classicRock") {
+    } else if(this.computerSelection === "scissors" && this.userSelection === "rock") {
       this.result = "You won!";
       this.player1.wins += 1;
-    } else if(this.computerSelection === "Scissors" && this.userSelection === "classicPaper") {
+    } else if(this.computerSelection === "scissors" && this.userSelection === "paper") {
       this.result = "You lost!";
       this.cpu.wins += 1;
     }

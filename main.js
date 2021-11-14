@@ -8,9 +8,9 @@ var chooseGameTitle = document.querySelector("#chooseGameTitle");
 var classicImages = document.querySelector("#classicGameBoard");
 var altImages = document.querySelector("#altGameBoard");
 var classicFighterSelection = document.querySelector("#classicGameBoard");
-var paperSelectionClassic = document.querySelector("#classicPaper");
-var scissorsSelectionClassic = document.querySelector("#classicScissors");
-var rockSelectionClassic = document.querySelector("#classicRock");
+var paperSelectionClassic = document.querySelector("#paper");
+var scissorsSelectionClassic = document.querySelector("#scissors");
+var rockSelectionClassic = document.querySelector("#rock");
 var loadPlayerData = document.querySelector("#humanWinsSection");
 var loadCpuData = document.querySelector("#cpuWinsSection");
 // Event Handlers
