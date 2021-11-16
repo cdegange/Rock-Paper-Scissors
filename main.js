@@ -7,13 +7,21 @@ var gameSelectionContainer = document.querySelector("#classicOrSpicy");
 var chooseGameTitle = document.querySelector("#chooseGameTitle");
 var classicImages = document.querySelector("#classicGameBoard");
 var altImages = document.querySelector("#altGameBoard");
+var replaceWithWinner = document.querySelector(".gamePlay-images");
 var classicFighterSelection = document.querySelector("#classicGameBoard");
 var altFighterSelection = document.querySelector("#altGameBoard");
 var paperSelectionClassic = document.querySelector("#paper");
 var scissorsSelectionClassic = document.querySelector("#scissors");
 var rockSelectionClassic = document.querySelector("#rock");
-var loadPlayerData = document.querySelector("#humanWinsSection");
-var loadCpuData = document.querySelector("#cpuWinsSection");
+var playerWinColumn = document.querySelector("#humanWinsSection");
+var cpuWinColumn = document.querySelector("#cpuWinsSection");
+var playerToken = document.querySelector("#humanToken");
+var playerName = document.querySelector("#humanPlayerName");
+var playerWinCount = document.querySelector("#humanWinsCounter");
+var computerToken = document.querySelector("#computerToken");
+var computerName = document.querySelector("#computerName");
+var computerWinCount = document.querySelector("#computerWinCounter");
+
 
 // Event Handlers
 window.addEventListener("load", function() {
@@ -30,8 +38,8 @@ altFighterSelection.addEventListener("click", function(event){
 
 function onPageLoad() {
   currentGame = new Game();
-  currentGame.player1.retrieveWinsFromStorage();
-  currentGame.cpu.retrieveWinsFromStorage();
+  // currentGame.player1.retrieveWinsFromStorage();
+  // currentGame.cpu.retrieveWinsFromStorage();
 };
 
 function switchClassicFighterView() {
@@ -47,7 +55,6 @@ function switchAltFighterView() {
   gameSelectionContainer.classList.add("hidden");
   altImages.classList.remove("hidden");
   chooseGameTitle.innerText = "PICK YOUR FIGHTER!";
-  console.log("TEST TEST TEST TEST")
   // loadCpu();
 };
 
@@ -63,25 +70,24 @@ function getOutcome() {
 } else if (currentGame.gameType === "Spicy") {
   currentGame.determineOutcomeAlt();
 }
-  // displayOutcome();
 };
 
-// function loadPlayer() {
-//   loadPlayerData.classList.add("hidden");
-//   loadPlayerData.innerHTML += `
-//     <h2 id="humanToken">${currentGame.player1.token}</h2>
-//     <h2 id="humanWinsColumn">${currentGame.player1.name}</h2>
-//     <h3 id="humanWinsCounter">${currentGame.player1.wins}</h3>    `
-// };
-//
-// function loadCpu() {
-//   loadCpuData.classList.add("hidden");
-//   loadPlayerData.innerHTML += `
-//     <h2 id="computerToken">${currentGame.cpu.token}</h2>
-//     <h2 id="computerWinColumn">${currentGame.cpu.name}</h2>
-//     <h3 id="computerWinCounter">${currentGame.cpu.wins}</h3>`
-// };
-//
-// function displayOutcome() {
-//
+
+function updatePlayerData() {
+  playerWinColumn.innerHTML += `
+    <h2 id="humanToken">${currentGame.player1.token}</h2>
+    <h2 id="humanPlayerName">${currentGame.player1.name}</h2>
+    <h3 id="humanWinsCounter">${currentGame.player1.wins}</h3>
+    `
+
+  cpuWinColumn.innerHTML += `
+    <h2 id="computerToken">${currentGame.cpu.token}</h2>
+    <h2 id="computerName">${currentGame.cpu.name}</h2>
+    <h3 id="computerWinCounter">${currentGame.cpu.wins}</h3>
+    `
+
+};
+
+// function startNewGame() {
+//   onPageLoad()
 // }

@@ -43,8 +43,10 @@ class Game {
       this.result = "You lost!";
       this.cpu.wins += 1;
     }
-    console.log(this.result)
-    console.log(this.player1.wins)
+    // this.player1.saveWinsToStorage();
+    // this.cpu.saveWinsToStorage();
+    updatePlayerData();
+    // startNewGame();
    }
    determineOutcomeAlt() {
      if(this.computerSelection === "rock" && this.userSelection === "altRock") {
