@@ -43,7 +43,8 @@ class Game {
       this.result = "You lost!";
       this.cpu.wins += 1;
     }
-    
+    this.player1.saveWinsToStorage();
+    this.player1.retrieveWinsFromStorage();
     updatePlayerData();
 
    }
@@ -133,9 +134,9 @@ console.log(this.computerSelection);
 console.log(this.result);
   }
 
-  getWins() {
-    this.player1.retrieveWinsFromStorage();
-    this.cpu.retrieveWinsFromStorage();
-  }
+  // getWins() {
+  //   this.player1.retrieveWinsFromStorage();
+  //   this.cpu.retrieveWinsFromStorage();
+  // }
   // this.startNewGame()
 }

@@ -29,8 +29,8 @@ var newGameButton = document.querySelector("#newGameButton");
 window.addEventListener("load", function() {
   onPageLoad()
 });
-classicGameSelection.addEventListener("click", switchClassicFighterView);
-altGameSelection.addEventListener("click", switchAltFighterView);
+classicGameSelection.addEventListener("click", switchClassicView);
+altGameSelection.addEventListener("click", switchAltView);
 classicFighterSelection.addEventListener("click", function(event){
   fighterSelectionAssignment(event)
 });
@@ -40,10 +40,11 @@ altFighterSelection.addEventListener("click", function(event){
 
 function onPageLoad() {
   currentGame = new Game();
-  currentGame.getWins();
+  updatePlayerData()
+  // currentGame.getWins();
 };
 
-function switchClassicFighterView() {
+function switchClassicView() {
   currentGame.gameType = "Classic";
   gameSelectionContainer.classList.add("hidden");
   classicImages.classList.remove("hidden");
@@ -52,7 +53,7 @@ function switchClassicFighterView() {
   newGameButton.classList.remove("hidden");
 };
 
-function switchAltFighterView() {
+function switchAltView() {
   currentGame.gameType = "Spicy";
   gameSelectionContainer.classList.add("hidden");
   altImages.classList.remove("hidden");
@@ -77,17 +78,13 @@ function getOutcome() {
 
 
 function updatePlayerData() {
-  playerWinColumn.innerHTML = '';
-  playerWinColumn.innerHTML += `
-    <h2 id="humanToken">${currentGame.player1.token}</h2>
-    <h2 id="humanPlayerName">${currentGame.player1.name}</h2>
-    <h3 id="humanWinsCounter">${currentGame.player1.wins}</h3>
+  playerWinCount.innerHTML = '';
+  playerWinCount.innerHTML += `
+    <h3 id="humanWinsCounter">Wins: ${currentGame.player1.retrieveWinsFromStorage()}</h3>
     `
-  cpuWinColumn.innerHTML = '';
-  cpuWinColumn.innerHTML += `
-    <h2 id="computerToken">${currentGame.cpu.token}</h2>
-    <h2 id="computerName">${currentGame.cpu.name}</h2>
-    <h3 id="computerWinCounter">${currentGame.cpu.wins}</h3>
+  computerWinCount.innerHTML = '';
+  computerWinCount.innerHTML += `
+    <h3 id="computerWinCounter">Wins: ${currentGame.cpu.retrieveWinsFromStorage()}</h3>
   `
 };
 
