@@ -39,7 +39,7 @@ function switchClassicFighterView() {
   gameSelectionContainer.classList.add("hidden");
   classicImages.classList.remove("hidden");
   chooseGameTitle.innerText = "PICK YOUR FIGHTER!";
-  loadPlayer();
+  // loadPlayer();
 };
 
 function switchAltFighterView() {
@@ -47,12 +47,13 @@ function switchAltFighterView() {
   gameSelectionContainer.classList.add("hidden");
   altImages.classList.remove("hidden");
   chooseGameTitle.innerText = "PICK YOUR FIGHTER!";
-  loadCpu();
+  console.log("TEST TEST TEST TEST")
+  // loadCpu();
 };
 
 function fighterSelectionAssignment(event) {
   currentGame.userSelection = event.target.id;
-  currentGame.computerSelection();
+  currentGame.takeTurn();
   getOutcome();
 };
 
@@ -62,25 +63,25 @@ function getOutcome() {
 } else if (currentGame.gameType === "Spicy") {
   currentGame.determineOutcomeAlt();
 }
-  displayOutcome();
+  // displayOutcome();
 };
 
-function loadPlayer() {
-  loadPlayerData.classList.add("hidden");
-  loadPlayerData.innerHTML += `
-    <h2 id="humanToken">${currentGame.player1.token}</h2>
-    <h2 id="humanWinsColumn">${currentGame.player1.name}</h2>
-    <h3 id="humanWinsCounter">${currentGame.player1.wins}</h3>    `
-};
-
-function loadCpu() {
-  loadCpuData.classList.add("hidden");
-  loadPlayerData.innerHTML += `
-    <h2 id="computerToken">${currentGame.cpu.token}</h2>
-    <h2 id="computerWinColumn">${currentGame.cpu.name}</h2>
-    <h3 id="computerWinCounter">${currentGame.cpu.wins}</h3>`
-};
-
-function displayOutcome() {
-
-}
+// function loadPlayer() {
+//   loadPlayerData.classList.add("hidden");
+//   loadPlayerData.innerHTML += `
+//     <h2 id="humanToken">${currentGame.player1.token}</h2>
+//     <h2 id="humanWinsColumn">${currentGame.player1.name}</h2>
+//     <h3 id="humanWinsCounter">${currentGame.player1.wins}</h3>    `
+// };
+//
+// function loadCpu() {
+//   loadCpuData.classList.add("hidden");
+//   loadPlayerData.innerHTML += `
+//     <h2 id="computerToken">${currentGame.cpu.token}</h2>
+//     <h2 id="computerWinColumn">${currentGame.cpu.name}</h2>
+//     <h3 id="computerWinCounter">${currentGame.cpu.wins}</h3>`
+// };
+//
+// function displayOutcome() {
+//
+// }

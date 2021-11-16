@@ -9,17 +9,16 @@ class Game {
     this.gameType ;
     this.choices ;
   }
-  computerSelection() {
-    console.log(this.gameType)
+  takeTurn() {
     if(this.gameType === "Classic") {
     this.choices = ["rock", "paper", "scissors"];
   } else if(this.gameType === "Spicy") {
     this.choices = ["rock", "scissors", "plane", "train", "car"]
   }
-  console.log(this.gameType);
-  console.log(this.choices);
     var randomNum = Math.floor(Math.random() * this.choices.length)
     this.computerSelection = this.choices[randomNum];
+    console.log(this.computerSelection)
+    console.log(this.userSelection)
     }
 
   determineOutcomeClassic() {
@@ -44,7 +43,8 @@ class Game {
       this.result = "You lost!";
       this.cpu.wins += 1;
     }
-     // this.startNewGame()
+    console.log(this.result)
+    console.log(this.player1.wins)
    }
    determineOutcomeAlt() {
      if(this.computerSelection === "rock" && this.userSelection === "altRock") {
@@ -117,16 +117,18 @@ class Game {
    } else if(this.computerSelection === "train" && this.userSelection === "altScissors") {
      this.result = "You lost!";
      this.cpu.wins += 1;
+   }
 // }
 //   // startNewGame(){
 //   //
 //   //
 //   }
+
 console.log(this.userSelection);
 console.log(this.computerSelection);
 console.log(this.result);
-    }
   }
+  // this.startNewGame()
 }
 
 

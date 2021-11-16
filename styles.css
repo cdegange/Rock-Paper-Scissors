@@ -46,6 +46,20 @@ h2 {
   width: 15%;
   background: #89d7e3
 }
+.classic-game-chosen:hover {
+  cursor: pointer;
+  border: 2px solid #dce8e6;
+  transform: scale(1.2);
+  transition: .5s;
+  border-radius: 10px
+}
+.alt-game-chosen:hover {
+  cursor: pointer;
+  border: 2px solid #dce8e6;
+  transform: scale(1.2);
+  transition: .5s;
+  border-radius: 10px
+}
 .computer-wins {
   height: 100vh;
   display: flex;
@@ -101,18 +115,4 @@ h2 {
 }
 .hidden {
   display: none;
-}
-.classic-game-chosen:hover {
-  cursor: pointer;
-  border: 2px solid #dce8e6;
-  transform: scale(1.2);
-  transition: .5s;
-  border-radius: 10px
-}
-.alt-game-chosen:hover {
-  cursor: pointer;
-  border: 2px solid #dce8e6;
-  transform: scale(1.2);
-  transition: .5s;
-  border-radius: 10px
 }

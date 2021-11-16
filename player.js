@@ -5,12 +5,10 @@ class Player {
     this.wins = 0
   }
   saveWinsToStorage() {
-  
+
   }
   retrieveWinsFromStorage() {
 
   }
-  takeTurn() {
-
-  }
+  
 }
