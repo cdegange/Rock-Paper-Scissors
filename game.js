@@ -45,9 +45,11 @@ class Game {
     }
     this.player1.saveWinsToStorage();
     this.player1.retrieveWinsFromStorage();
+    this.cpu.saveWinsToStorage();
+    this.cpu.retrieveWinsFromStorage();
     updatePlayerData();
-
    }
+
    determineOutcomeAlt() {
      if(this.computerSelection === "rock" && this.userSelection === "altRock") {
      this.result = "It's a draw!";
@@ -120,14 +122,12 @@ class Game {
      this.result = "You lost!";
      this.cpu.wins += 1;
    }
-
+   this.player1.saveWinsToStorage();
+   this.player1.retrieveWinsFromStorage();
+   this.cpu.saveWinsToStorage();
+   this.cpu.retrieveWinsFromStorage();
    updatePlayerData();
-// }
 
-//   // startNewGame(){
-//   //
-//   //
-//   }
 
 console.log(this.userSelection);
 console.log(this.computerSelection);

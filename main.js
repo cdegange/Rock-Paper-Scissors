@@ -23,9 +23,11 @@ var computerName = document.querySelector("#computerName");
 var computerWinCount = document.querySelector("#computerWinCounter");
 var changeGameButton = document.querySelector("#changeGameButton");
 var newGameButton = document.querySelector("#newGameButton");
+var updateWinner = document.querySelector(".displayClassicWinner");
 
 
-// Event Handlers
+
+// Event Listeners
 window.addEventListener("load", function() {
   onPageLoad()
 });
@@ -37,11 +39,12 @@ classicFighterSelection.addEventListener("click", function(event){
 altFighterSelection.addEventListener("click", function(event){
   fighterSelectionAssignment(event)
 });
+newGameButton.addEventListener("click", startNew);
+changeGameButton.addEventListener("click", changeGame);
 
 function onPageLoad() {
   currentGame = new Game();
   updatePlayerData()
-  // currentGame.getWins();
 };
 
 function switchClassicView() {
@@ -86,8 +89,26 @@ function updatePlayerData() {
   computerWinCount.innerHTML += `
     <h3 id="computerWinCounter">Wins: ${currentGame.cpu.retrieveWinsFromStorage()}</h3>
   `
+  // displayWin();
 };
 
-// function startNewGame() {
-//   onPageLoad()
+// function displayWin() {
+//   if(currentGame.result === "You Won!") {
+//     displayWinner.innerText = "Congratulations, you won!";
+// } else if(currentGame.result === "You lost!") {
+//     displayWinner.innerText = "Sorry, you lost!";
+// } else if(currentGame.result === "It's a draw!") {
+//     displayWinner.innerText = "This round is a draw, better luck next time!";
+//   }
 // }
+
+// button functions
+
+function changeGame() {
+  location.reload();
+}
+
+function startNew() {
+  localStorage.clear();
+  location.reload();
+  }
