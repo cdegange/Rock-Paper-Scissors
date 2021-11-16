@@ -28,6 +28,7 @@ var updateWinner = document.querySelector(".displayClassicWinner");
 
 
 // Event Listeners
+
 window.addEventListener("load", function() {
   onPageLoad()
 });
@@ -41,6 +42,8 @@ altFighterSelection.addEventListener("click", function(event){
 });
 newGameButton.addEventListener("click", startNew);
 changeGameButton.addEventListener("click", changeGame);
+
+// view change functions
 
 function onPageLoad() {
   currentGame = new Game();
@@ -65,6 +68,8 @@ function switchAltView() {
   newGameButton.classList.remove("hidden");
 };
 
+// logic functions
+
 function fighterSelectionAssignment(event) {
   currentGame.userSelection = event.target.id;
   currentGame.takeTurn();
@@ -76,9 +81,10 @@ function getOutcome() {
   currentGame.determineOutcomeClassic();
 } else if (currentGame.gameType === "Spicy") {
   currentGame.determineOutcomeAlt();
-}
+  }
 };
 
+// displays and buttons
 
 function updatePlayerData() {
   playerWinCount.innerHTML = '';
@@ -89,26 +95,30 @@ function updatePlayerData() {
   computerWinCount.innerHTML += `
     <h3 id="computerWinCounter">Wins: ${currentGame.cpu.retrieveWinsFromStorage()}</h3>
   `
-  // displayWin();
 };
 
-// function displayWin() {
-//   if(currentGame.result === "You Won!") {
-//     displayWinner.innerText = "Congratulations, you won!";
-// } else if(currentGame.result === "You lost!") {
-//     displayWinner.innerText = "Sorry, you lost!";
-// } else if(currentGame.result === "It's a draw!") {
-//     displayWinner.innerText = "This round is a draw, better luck next time!";
-//   }
-// }
+function displayWin() {
+  if(currentGame.result === "You Won!") {
+    chooseGameTitle.innerText = "Congratulations, you won!";
+} else if(currentGame.result === "You lost!") {
+    chooseGameTitle.innerText = "Sorry, you lost!";
+} else if(currentGame.result === "It's a draw!") {
+    chooseGameTitle.innerText = "This round is a draw!";
+  }
+  setTimeout(changeBackHeading, [3000]);
+};
+
+function changeBackHeading() {
+  chooseGameTitle.innerText = "PICK YOUR FIGHTER!";
+}
 
 // button functions
 
 function changeGame() {
   location.reload();
-}
+};
 
 function startNew() {
   localStorage.clear();
   location.reload();
-  }
+};
