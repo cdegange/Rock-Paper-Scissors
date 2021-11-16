@@ -43,10 +43,9 @@ class Game {
       this.result = "You lost!";
       this.cpu.wins += 1;
     }
-    // this.player1.saveWinsToStorage();
-    // this.cpu.saveWinsToStorage();
+    
     updatePlayerData();
-    // startNewGame();
+
    }
    determineOutcomeAlt() {
      if(this.computerSelection === "rock" && this.userSelection === "altRock") {
@@ -120,7 +119,10 @@ class Game {
      this.result = "You lost!";
      this.cpu.wins += 1;
    }
+
+   updatePlayerData();
 // }
+
 //   // startNewGame(){
 //   //
 //   //
@@ -130,25 +132,10 @@ console.log(this.userSelection);
 console.log(this.computerSelection);
 console.log(this.result);
   }
+
+  getWins() {
+    this.player1.retrieveWinsFromStorage();
+    this.cpu.retrieveWinsFromStorage();
+  }
   // this.startNewGame()
 }
-
-
-
-// When fighter is selected, program should recognize id that was clicked
-// id should be stored in player instance
-// computer should then generate a random selection
-// id should be stored in player2 instances
-// a winner should be determined
-// win count in instance should be updated
-// win count should then be added to localStorage
-// have a button to reload page or a timeOut function to play new game
-// when page reloads, wins should persist by being retrieved from storage
-
-
-// game.js
-
-// should have two player instances (a computer and the user)
-// track data from game altGameBoard
-// determine who won or if it is a draw
-// when winner is determined, a way to reset board and play altGameSelection

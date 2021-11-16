@@ -2,7 +2,7 @@
 
 ## Overview
 
-This app is a useful tool for timing your favorite activities whether that be study, meditative or exercise. Just choose your activity, set a goal, tell the app how long you want to go for and hit start. You can view the application [here](file:///Users/chaddegange/turing/module_1/projects/intention-timer/index.html).
+This app is both a traditional game of Rock, Paper, Scissors as well as an alternative game with an exciting twist. The user simply selects the version they would like to play, and chooses their fighter. The computer randomly selects it's fighter and a win, loss or draw is displayed! The game then allows the user to select a new game and wins persist across all games. [here](file:///Users/chaddegange/turing/module_1/projects/intention-timer/index.html).
 
 ## How Does It Work?
 

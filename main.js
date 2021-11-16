@@ -21,6 +21,8 @@ var playerWinCount = document.querySelector("#humanWinsCounter");
 var computerToken = document.querySelector("#computerToken");
 var computerName = document.querySelector("#computerName");
 var computerWinCount = document.querySelector("#computerWinCounter");
+var changeGameButton = document.querySelector("#changeGameButton");
+var newGameButton = document.querySelector("#newGameButton");
 
 
 // Event Handlers
@@ -38,8 +40,7 @@ altFighterSelection.addEventListener("click", function(event){
 
 function onPageLoad() {
   currentGame = new Game();
-  // currentGame.player1.retrieveWinsFromStorage();
-  // currentGame.cpu.retrieveWinsFromStorage();
+  currentGame.getWins();
 };
 
 function switchClassicFighterView() {
@@ -47,7 +48,8 @@ function switchClassicFighterView() {
   gameSelectionContainer.classList.add("hidden");
   classicImages.classList.remove("hidden");
   chooseGameTitle.innerText = "PICK YOUR FIGHTER!";
-  // loadPlayer();
+  changeGameButton.classList.remove("hidden");
+  newGameButton.classList.remove("hidden");
 };
 
 function switchAltFighterView() {
@@ -55,7 +57,8 @@ function switchAltFighterView() {
   gameSelectionContainer.classList.add("hidden");
   altImages.classList.remove("hidden");
   chooseGameTitle.innerText = "PICK YOUR FIGHTER!";
-  // loadCpu();
+  changeGameButton.classList.remove("hidden");
+  newGameButton.classList.remove("hidden");
 };
 
 function fighterSelectionAssignment(event) {
@@ -74,18 +77,18 @@ function getOutcome() {
 
 
 function updatePlayerData() {
+  playerWinColumn.innerHTML = '';
   playerWinColumn.innerHTML += `
     <h2 id="humanToken">${currentGame.player1.token}</h2>
     <h2 id="humanPlayerName">${currentGame.player1.name}</h2>
     <h3 id="humanWinsCounter">${currentGame.player1.wins}</h3>
     `
-
+  cpuWinColumn.innerHTML = '';
   cpuWinColumn.innerHTML += `
     <h2 id="computerToken">${currentGame.cpu.token}</h2>
     <h2 id="computerName">${currentGame.cpu.name}</h2>
     <h3 id="computerWinCounter">${currentGame.cpu.wins}</h3>
-    `
-
+  `
 };
 
 // function startNewGame() {
