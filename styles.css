@@ -107,6 +107,18 @@ h2 {
   transition: .5s;
   background: #dce8e6;
 }
+.classic-game-chosen {
+  width: 125px;
+  height: 125px;
+}
+.alt-game-chosen {
+  width: 100px;
+  height: 100px;
+}
+.title-images {
+  width: 35px;
+  height:35px
+}
 .gameplay-images {
   margin-top: 30vh;
   display: flex;

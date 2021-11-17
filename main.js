@@ -74,6 +74,8 @@ function fighterSelectionAssignment(event) {
   currentGame.userSelection = event.target.id;
   currentGame.takeTurn();
   getOutcome();
+  updatePlayerData();
+  displayWin();
 };
 
 function getOutcome() {
@@ -98,7 +100,7 @@ function updatePlayerData() {
 };
 
 function displayWin() {
-  if(currentGame.result === "You Won!") {
+  if(currentGame.result === "You won!") {
     chooseGameTitle.innerText = "Congratulations, you won!";
 } else if(currentGame.result === "You lost!") {
     chooseGameTitle.innerText = "Sorry, you lost!";

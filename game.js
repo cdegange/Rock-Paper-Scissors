@@ -41,12 +41,10 @@ class Game {
         this.result = "You lost!";
         this.cpu.wins += 1;
     }
-        this.player1.saveWinsToStorage();
-        this.player1.retrieveWinsFromStorage();
-        this.cpu.saveWinsToStorage();
-        this.cpu.retrieveWinsFromStorage();
-        updatePlayerData();
-        displayWin();
+    this.player1.saveWinsToStorage();
+    this.player1.retrieveWinsFromStorage();
+    this.cpu.saveWinsToStorage();
+    this.cpu.retrieveWinsFromStorage();
   }
 
   determineOutcomeAlt() {
@@ -121,11 +119,9 @@ class Game {
        this.result = "You lost!";
        this.cpu.wins += 1;
    }
-         this.player1.saveWinsToStorage();
-         this.player1.retrieveWinsFromStorage();
-         this.cpu.saveWinsToStorage();
-         this.cpu.retrieveWinsFromStorage();
-         updatePlayerData();
-         displayWin();
+   this.player1.saveWinsToStorage();
+   this.player1.retrieveWinsFromStorage();
+   this.cpu.saveWinsToStorage();
+   this.cpu.retrieveWinsFromStorage();
   }
 }
