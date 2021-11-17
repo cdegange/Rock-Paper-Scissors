@@ -2,57 +2,39 @@
 
 ## Overview
 
-This app is both a traditional game of Rock, Paper, Scissors as well as an alternative game with an exciting twist. The user simply selects the version they would like to play, and chooses their fighter. The computer randomly selects it's fighter and a win, loss or draw is displayed! The game then allows the user to select a new game and wins persist across all games. [here](file:///Users/chaddegange/turing/module_1/projects/intention-timer/index.html).
+This app is both a traditional game of Rock, Paper, Scissors as well as an alternative game with an exciting twist. The user simply selects the version they would like to play, and chooses their fighter. The computer randomly selects it's fighter and a win, loss or draw is displayed! The game then allows the user to select a new game and wins persist across all games. [here](file:///Users/chaddegange/turing/module_1/projects/rock-paper-scissors/index.html).
 
 ## How Does It Work?
 
-1) When the page loads, the user is presented with a New Activity header. Below that are 3 category buttons with hover states informing the user that they are clickable elements on the page. Below that is a user input field, fillable for setting a user defined goal. Lastly, there are a minutes and seconds input that again is user defined, accepts only 2 digits as well as limits the user to inputing no more than 60 seconds. At the bottom right, a Start Activity button is disabled until all fields above have been properly completed. If any fields are not properly completed, an error message pops up to guide the user to a correction.
+1) The page loads and the user is presented with a Rock, Paper, Scissors header along with two game choices and the rules for each within their own containers. On the right and left of the page are full height columns displaying a player, and token as well as the computer. Each game choice, Classic or Spicy presents hover states to the user to define a clickable property.
 
-<img width="1440" alt="Screen Shot 2021-11-08 at 6 04 57 PM" src="https://user-images.githubusercontent.com/65195952/140842781-43cc9058-b552-44d4-bbe7-33cbe27bfaec.png">
+<img width="1440" alt="Screen Shot 2021-11-08 at 6 04 57 PM" src="https://user-images.githubusercontent.com/41452531/142101013-a131f7d1-7e32-41bc-bd67-83ba35bcfe89.png">
 
 
-2) When the user clicks the Start Activity button, they are taken to a timer view allowing them to hit a Start button and begin the activity. The button has a border color corresponding to the activity category they chose in the home view. Past activities are viewable on the right side of the screen.
+2) Once a game type is selected, the user is presented with a fighter selection page. The left side of the page below player column now displays a change game and new game button with hover states. The fighter options are displayed in the middle of the page and the header now reads "Choose your fighter." The fighter icons each have hover states and when clicked display at the top a win, loss or draw. The outcome heading is displayed for 3 seconds before timing out and reverting to "Choose your figher". Score is cumulative in the computer and player columns as games are played.
 
-<img width="1440" alt="Screen Shot 2021-11-08 at 5 58 44 PM" src="https://user-images.githubusercontent.com/65195952/140842254-9a649dd7-46b0-4a57-882a-f9c5d2bec268.png">
+<img width="1440" alt="Screen Shot 2021-11-08 at 5 58 44 PM" src="https://user-images.githubusercontent.com/41452531/142104206-f0a925a4-7774-41bf-b2da-805ca443033f.png">
 
-<img width="1440" alt="Screen Shot 2021-11-08 at 5 58 59 PM" src="https://user-images.githubusercontent.com/65195952/140842261-e2243fae-fe88-4735-a9af-82a47d44b345.png">
+<img width="1440" alt="Screen Shot 2021-11-08 at 5 58 59 PM" src="https://user-images.githubusercontent.com/41452531/142105105-d9c482ba-059a-434d-96ef-ac148993cc8b.png">
 
-3) When the user clicks the Start button, the time countdown begins. The Start button is disabled once it has been pressed.
+3) When change game button is selected, the user is returned to the home screen to once again choose between a classic or spicy game play. The new game and change game buttons are hidden but the cumulative scores persist.
 
-<img width="1440" alt="Screen Shot 2021-11-08 at 6 06 08 PM" src="https://user-images.githubusercontent.com/65195952/140842882-8750875c-b537-4202-9ea7-420b246b6fc7.png">
+<img width="1440" alt="Screen Shot 2021-11-08 at 6 06 08 PM" src="https://user-images.githubusercontent.com/41452531/142109340-c512e8bd-6e30-41f4-a6e8-5da8ff6574d8.png">
 
-4) When the timer finishes, the Start button displays a Complete message to the user and a Log Activity button is displayed.
+4) Clicking the new game button at any point resets the game and scores.
 
-<img width="1440" alt="Screen Shot 2021-11-08 at 6 11 51 PM" src="https://user-images.githubusercontent.com/65195952/140843385-ff2b4c83-e734-42f4-a5bd-e713ef1af44f.png">
-
-5) When Log Activity is pressed, the activity details are added to the Past Activities log on the right side of the page and a new view is displayed with a Create A New Activity button.
-
-<img width="1440" alt="Screen Shot 2021-11-08 at 6 12 53 PM" src="https://user-images.githubusercontent.com/65195952/140843475-b70dacc5-6aeb-4e17-8f5d-373331279f7f.png">
-
-6) Pressing the Create A New Activity button returns the user to the home view ready to select a new activity and now displaying the previously completed activity on the right side of the page under Past Activities.
-
-<img width="1440" alt="Screen Shot 2021-11-08 at 6 13 46 PM" src="https://user-images.githubusercontent.com/65195952/140843566-ba53ffcb-dcc4-43d3-9825-bda0cf0058f7.png">
-
-7) Past activities are logged on the right with handy color references that correspond to the category button used to create it. This data is stored locally and displayed upon page load.
-
-<img width="1440" alt="Screen Shot 2021-11-08 at 6 16 25 PM" src="https://user-images.githubusercontent.com/65195952/140843814-61f8c8f2-4fba-4ea8-8a54-8321b046fe89.png">
-
-8) If the user does not copmlete any of the fields, an error message will appear and the user cannot proceed further.
-
-<img width="1440" alt="Screen Shot 2021-11-08 at 6 16 59 PM" src="https://user-images.githubusercontent.com/65195952/140843850-3e0a8dc6-2aae-4699-8f20-16a0e9270713.png">
+<img width="1440" alt="Screen Shot 2021-11-08 at 6 11 51 PM" src="https://user-images.githubusercontent.com/41452531/142109596-4ce9fc9d-ba21-40ff-8650-8b1518ef85b7.png">
 
 ## Contributors
 
-- Turing School of Software & Design Front-End Students
-   - Chad DeGange
-   (https://github.com/cdegange)
+- Turing School of Software & Design Front-End Student
+   - Chad DeGange (https://github.com/cdegange)
 
 ## Future Feature Additions
 
-- Expand/Collapse Reflection allowing user to reflect on activity.
-- Favorite and Activity and ability to repeat it.
-- Ability to pause and resume the timer before completion.
-- Animate the timer in a way that communicates remaining time.
+- Add animations to make the game more interactive.
+- Leaderboard.
+- Change game theme to something more user friendly.
 
 ## Technologies Used
 
