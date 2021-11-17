@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <section class="human-wins"id="humanWinsSection">
+      <h2 id="humanToken">🕵️‍♀️</h2>
+      <h2 id="humanPlayerName">Player</h2>
+      <h3 id="humanWinsCounter"></h3>
+      <button class="changeGameButton hidden"id="changeGameButton">Change Game</button>
+      <button class="changeGameButton hidden"id="newGameButton">New Game 🔥</button>
+    </section>
+  <main>
+        <h1 class = "main-title">Rock, Paper, Scissors</h1>
+        <h2 class = "choose-your-game"id = "chooseGameTitle">Choose your game!</h2>
+      <section class="gameplay-images hidden"id="classicGameBoard">
+          <h1 class="display-winner"></h1>
+          <img class = "classic-game-chosen"id="paper"src=/Users/chaddegange/Downloads/happy-paper.png>
+          <img class = "classic-game-chosen"id="scissors"src=/Users/chaddegange/Downloads/happy-scissors.png>
+          <img class = "classic-game-chosen"id="rock"src=/Users/chaddegange/Downloads/happy-rocks.png>
+      </section>
+      <section class="gameplay-images hidden"id="altGameBoard">
+          <h1 class="display-winner"></h1>
+          <img class= "alt-game-chosen"id="altPlane" src=/Users/chaddegange/Downloads/plane-svgrepo-com.svg>
+          <img class= "alt-game-chosen"id="altCar" src=/Users/chaddegange/Downloads/car-svgrepo-com.svg>
+          <img class= "alt-game-chosen"id="altTrain" src=/Users/chaddegange/Downloads/train-svgrepo-com.svg>
+          <img class= "alt-game-chosen"id="altScissors" src=/Users/chaddegange/Downloads/happy-scissors.png>
+          <img class= "alt-game-chosen"id="altRock" src=/Users/chaddegange/Downloads/happy-rocks.png>
+      </section>
+    <section class = "classic-or-spicy"id="classicOrSpicy">
+      <div class = "classic-game-rules"id = "classGameRules">
+        <h2 class = "classic"><img class="title-images"src=/Users/chaddegange/Downloads/happy-rocks.png><span>&nbsp;</span>CLASSIC<span>&nbsp;</span><img class="title-images"src=/Users/chaddegange/Downloads/happy-scissors.png></h2>
+        <p class = "game-rules">rock > scissors</p>
+        <p class = "game-rules">scissors > paper</p>
+        <p class = "game-rules">paper > rock</p>
+      </div>
+      <div class = "alt-game-rules"id = "altGameRules">
+        <h2 class = "alternative"><img class="title-images"src=/Users/chaddegange/Downloads/plane-svgrepo-com.svg><span>&nbsp;</span>SPICY<span>&nbsp;</span><img class="title-images"src=/Users/chaddegange/Downloads/train-svgrepo-com.svg></h2>
+        <p class = "game-rules">rock > scissors & car & plane</p>
+        <p class = "game-rules">scissors > rock & plane</p>
+        <p class = "game-rules">plane > car & train</p>
+        <p class = "game-rules">car > scissors & plane</p>
+        <p class = "game-rules">train > car & rock</p>
+      </div>
+    </section>
+  </main>
+    <section class="computer-wins"id="cpuWinsSection">
+      <h2 id="computerToken">💻</h2>
+      <h2 id="computerName">Computer</h2>
+      <h3 id="computerWinCounter"> Wins: O</h3>
+    </section>
+  </body>
+  <script src="game.js"></script>
+  <script src="player.js"></script>
+  <script src="main.js"></script>
+</html>
